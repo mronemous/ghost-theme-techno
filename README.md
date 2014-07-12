@@ -23,7 +23,7 @@ I'm using this theme for my personal site, [ronemous.com](http://ronemous.com)
 
 You can download the theme here
 
-- [Github.io - zip](http://mronemous.github.io/ghost-theme-techno)
+<!-- - [Github.io - zip](http://mronemous.github.io/ghost-theme-techno) -->
 - [Github - code](https://github.com/mronemous/ghost-theme-techno)
 
 ## Theme Features
@@ -49,7 +49,7 @@ You can download the theme here
 ## Using Techno Theme
 
 1. Copy the theme folder inside `/content/themes` of Ghost.
-2. Add the following code to your [ghost root]/index.js file (green)
+2. Copy the following code to your [ghost root]/index.js file
 
 <pre>
 // # Ghost bootloader
@@ -58,16 +58,12 @@ You can download the theme here
 
 var ghost = require('./core'),
     errors = require('./core/server/errorHandling')
-    <div style="background-color:light-green;">
     ,themeIndex = require('./content/themes/techno/index');
-    </div>
 
 ghost()
-<div style="background-color:light-green;">
 .then(function () {
     themeIndex();
 })
-</div>
 .otherwise(function (err) {
     errors.logErrorAndExit(err, err.context, err.help);
 });
