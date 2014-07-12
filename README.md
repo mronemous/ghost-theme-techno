@@ -15,8 +15,6 @@ Here are the enhancments added to Bastard
 
 Techno theme was built using [Bootstrap 3](http://getbootstrap.com/), [SASS](http://sass-lang.com), [Font Awesome](http://fortawesome.github.io/Font-Awesome/), [Bower](http://bower.io/), and [Grunt](http://gruntjs.com/). Grunt is used to automate tasks for compiling and minifying the theme components and Bower to manage package dependencies. You can use the theme as is, or customize it by editing the `default.js` and `/assets/sass/*.scss` files.
 
-![Bastard](http://f.cl.ly/items/3f2X3p2K2A1E1z263k2K/bastard-sample2.png)
-
 ## Demo
 
 I'm using this theme for my personal site, [ronemous.com](http://ronemous.com)
@@ -85,7 +83,7 @@ The new index.js allows
 6. Restart Ghost and then go to Ghost's Settings (http://your.domain.com/ghost/settings/general/). Choose "Techno" from the theme dropdown menu and save your changes.
 7. Write some really awesome posts!
 
-## Customising Techno Theme (Developers)
+## Customizing Techno Theme (Developers)
 
 Techno theme uses Grunt to lint, compile, and concatenate the javascript and [SASS](http://sass-lang.com/) components. Customize the theme by editing the `assets/js/default.js` and `sass/*` files. Run `grunt` to compile your changes or use the `grunt watch` while you build your own theme.
 
