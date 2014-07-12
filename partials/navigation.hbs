@@ -1,0 +1,33 @@
+<nav class="site-nav" role="navigation">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{@blog.url}}">
+                    <img class="logo" src="{{@blog.theme.logo}}"/>
+                    {{@blog.title}}
+                </a>
+            </div>
+            <div class="navbar-collapse navbar-responsive-collapse collapse" style="height: 1px;">
+                <ul class="navbar-nav nav menu menu-main-menu">
+
+                  {{#each @blog.theme.menu}}
+                  <li><a href="{{@blog.url}}{{route}}">{{text}}</a></li>
+                  {{/each}}
+
+                </ul>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input class="search" type="text" placeholder="Search..."/>
+                    </div>
+                </form>
+            </div>
+        </div>
+       {{> search}}
+    </div>
+</nav>

@@ -1,0 +1,48 @@
+pre {
+  padding: 0px;
+  border-radius: 5px;
+  font-size:80%;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+
+  h1 {
+    font-size: 4.8rem;
+    text-indent: -2px;
+  }
+  h2 {
+    font-size: 3.8rem;
+  }
+  h3 {
+    font-size: 3.3rem;
+  }
+  h4 {
+    font-size: 2.8rem;
+  }
+
+  /*
+  i {
+    font-size: 1.8rem;
+  }
+  */
+}
+
+@media only screen and (max-width: 500px) {
+
+  h1, h2 {
+    font-size: 3rem;
+    line-height: 1.1em;
+    letter-spacing: -1px;
+  }
+  h3 {
+    font-size: 2.8rem;
+  }
+  h4 {
+    font-size: 2.3rem;
+  }
+}

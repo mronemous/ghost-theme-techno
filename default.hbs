@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/default.min.css"}}" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+
+    {{! Touch icons and favicon }}
+    <!-- TODO: Setup favicon for apple device -->
+
+    <link rel="icon" type="image/x-icon" href="{{asset "/images/favicon.ico"}}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset "/images/favicon.ico"}}" />
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+
+    <!-- Fill in google analytics information -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', '{{@blog.theme.google.analytics.account}}', '{{@blog.theme.google.analytics.domain}}');
+      ga('send', 'pageview');
+
+    </script>
+
+  </head>
+<body class="{{body_class}}">
+
+    {{> navigation}}
+
+    {{! Everything else gets inserted here }}
+    <div class="default-body">
+    {{{body}}}
+
+    <footer class="site-footer">
+        <div class="label label-default">
+         <div><a href="{{@blog.url}}/">{{@blog.title}}</a> &copy; {{date format="YYYY"}} &bull; All rights reserved.</div>
+         <div>Proudly published with <a class="icon-ghost" href="http://ghost.org">Ghost</a> and <a href="https://github.com/mronemous/ghost-theme-techno">Techno</a> theme.</div>
+        </div>
+    </footer>
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foo }}
+
+    <script type="text/javascript" src="{{asset "js/scripts.min.js"}}"></script>
+    </div>
+
+</body>
+</html>

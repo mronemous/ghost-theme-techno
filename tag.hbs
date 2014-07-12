@@ -1,0 +1,15 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! The main content area on the homepage }}
+<main class="content" role="main">
+
+    <header class="tag-header">
+        <h4>Tagged with {{tag.name}}</h4>
+    </header>
+
+    {{> posts}}
+
+</main>

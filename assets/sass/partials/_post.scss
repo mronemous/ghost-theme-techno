@@ -1,0 +1,44 @@
+.post {
+  width: 96%;
+  margin: 2% 0% 0% 2%;
+
+  .post-title {
+    margin-top: 10px;
+  }
+
+  .metaheader {
+
+    i.fa-user {
+      padding-left: 5px;
+    }
+  }
+
+  .metafooter {
+
+  }
+
+  .post-excerpt {
+    margin-bottom: 10px;
+  }
+}
+
+.post-template {
+
+  .post-header {
+    padding: 40px 0px 20px 0px;
+    text-align: center;
+
+    h3 {
+      margin: 0px;
+    }
+  }
+
+  .post-comments {
+    margin-top: 10px;
+  }
+
+}
+
+.tag-header {
+  text-align: center;
+}

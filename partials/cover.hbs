@@ -1,0 +1,23 @@
+<div class="cover">
+
+<header class="site-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+
+    <div class="vertical">
+        <div class="site-head-content">
+            <h1 class="blog-title">{{@blog.title}}</h1>
+            <h5 class="blog-description">{{@blog.description}}</h5>
+            {{! Social Links }}
+            {{> social}}
+
+            <div class="page-scroll">
+                <a href="#top" class="btn btn-circle">
+                    <i class="fa fa-angle-down fa-2x animated"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+</div>
+<div id="top" class="top-ornament"></div>

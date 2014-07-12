@@ -1,0 +1,25 @@
+{{! Each post will be output using this markup }}
+{{#foreach posts}}
+
+<article class="{{post_class}}">
+    <header class="post-header">
+        {{> post-metaheader}}
+        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+
+    </header>
+    <section class="post-excerpt">
+        <p>{{excerpt characters="220"}}</p>
+    </section>
+    {{> post-metafooter}}
+</article>
+<hr/>
+
+{{/foreach}}
+
+<div class="container">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        {{pagination}}
+      </div>
+    </div>
+</div>
