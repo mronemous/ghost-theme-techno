@@ -1,19 +1,19 @@
 var theme =
 {
-    logo: 'https://s.gravatar.com/avatar/17657df5ab0c43f75d240ad96f8e8195?s=80',
+    logo: '[YOUR LOGO]',
     author: {
-        github: 'https://github.com/mronemous',
-        twitter: 'https://twitter.com/mronemous',
-        linkedin: 'http://linkedin.com/in/mronemous',
-        email: 'mailto:matt.ronemous@gmail.com'
+        github: 'https://github.com/[YOUR ACCOUNT]',
+        twitter: 'https://twitter.com/[YOUR ACCOUNT]',
+        linkedin: 'http://linkedin.com/in/[YOUR ACCOUNT]',
+        email: 'mailto:[YOUR EMAIL]'
     },
     disqus: {
-        shortname: 'matt-ronemous'
+        shortname: '[YOUR DISQUS SHORTNAME]'
     },
     google: {
         analytics: {
-            account: 'UA-51320632-1',
-            domain: 'ronemous.com'
+            account: '[YOUR GA ACCOUNT]',
+            domain: '[YOUR GA DOMAIN]'
         }
     },
 
@@ -22,19 +22,6 @@ var theme =
         { route: '/about', text: 'About'},
         { route: '/projects', text: 'Projects'}
     ]
-
-
-
-
-    /*
-
-     <li><a href="{{@blog.url}}">Home</a>
-     </li>
-     <li><a href="{{@blog.url}}/about">About</a>
-     </li>
-     <li><a href="{{@blog.url}}/projects">Projects</a>
-     </li>
-   */
 }
 
 // Export config

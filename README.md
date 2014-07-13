@@ -3,9 +3,9 @@ Techno Theme for Ghost
 
 A free boilerplate responsive theme for [Ghost](https://ghost.org) blogging platform.  The theme is easy to setup for non-technical bloggers.  It also includes components to better support technical blogs (hence the name Techno).  The theme uses hot technologies that many developers are interested in.
 
-Techno was originally based on the work of Karlo Espiritu's Bastard theme.  Thank you Karlo for your amazing start on this theme.
+Techno was originally based on the work of Karlo Espiritu's Bastard theme.  Thank you Karlo for starting this theme.
 
-Here are the enhancments added to Bastard
+Here are the enhancements added to Bastard
 
 - General refactor and cleanup (opinionated)
 - [Disqus](http://disqus.com/)
@@ -84,12 +84,12 @@ The new index.js allows
 Techno theme uses Grunt to lint, compile, and concatenate the javascript and [SASS](http://sass-lang.com/) components. Customize the theme by editing the `assets/js/default.js` and `sass/*` files. Run `grunt` to compile your changes or use the `grunt watch` while you build your own theme.
 
 1. Clone ghost to your machine.
-2. Do the basic setup above against you local copy of ghost.
+2. Do the basic setup above against your local copy of ghost.
 3. Run `bower install` to install package dependencies.
 4. Run `npm install` to install Grunt components.
 5. Run `grunt watch` to start watching for file changes or run `grunt` to build your latest changes.
 6. Make your changes by updating `/sass/*`, `/assets/*`, and `*.hbs` files of the theme.
-7. If you have new images for the theme, just place them inside `image_sources` folder and Grunt will handle the optimisation automatically and store the optimized version inside `assets/images/`.
+7. If you have new images for the theme, just place them inside `image_sources` folder and Grunt will handle the optimization automatically and store the optimized version inside `assets/images/`.
 8. npm start --development at ghost root will run a local server.
 9. Hack away! If you have a useful addition please contribute to the github repo.
 
@@ -118,11 +118,3 @@ To customize the bootswatch theme
 ## License
 
 [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0)
-
-## Author
-
-**Matthew Ronemous**
-- [email](mailto:matt.ronemous@gmail.com)
-- [Twitter](https://twitter.com/mronemous)
-- [Github](https://github.com/mronemous)
-- [ronemous.com](http://ronemous.com)
