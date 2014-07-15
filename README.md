@@ -23,8 +23,7 @@ I'm using this theme for my personal site, [ronemous.com](http://ronemous.com)
 
 You can download the theme here
 
-<!-- - [Github.io - zip](http://mronemous.github.io/ghost-theme-techno) -->
-- [Github - code](https://github.com/mronemous/ghost-theme-techno)
+- [Github.io - zip](http://mronemous.github.io/ghost-theme-techno)
 
 ## Theme Features
 
