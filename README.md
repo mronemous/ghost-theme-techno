@@ -19,14 +19,6 @@ Techno theme was built using [Bootstrap 3](http://getbootstrap.com/), [SASS](htt
 
 I'm using this theme for my personal site, [ronemous.com](http://ronemous.com)
 
-/*
-## Download
-
-You can download the theme here
-
-- [Github.io - zip](http://mronemous.github.io/ghost-theme-techno)
-*/
-
 ## Theme Features
 
 * Clean and well-documented code
@@ -83,15 +75,14 @@ ghost()
 });
 </pre>
 
-The new index.js allows
-- custom handlebars helpers (in themes/techno/index.js) to be registered
-- the config.js file to be referenced in the handlebars templates
+The new index.js allows custom handlebars helpers (in themes/techno/index.js) to be registered
+and the config.js file to be referenced in the handlebars templates.
 
-3. Customize the details in themes/techno/config.js
-4. Update images/cover.jpg
-5. Update images/favicon.ico
-6. Restart Ghost and then go to Ghost's Settings (http://your.domain.com/ghost/settings/general/). Choose "Techno" from the theme dropdown menu and save your changes.
-7. Write some really awesome posts!
+1. Customize the details in themes/techno/config.js
+2. Update images/cover.jpg
+3. Update images/favicon.ico
+4. Restart Ghost and then go to Ghost's Settings (http://your.domain.com/ghost/settings/general/). Choose "Techno" from the theme dropdown menu and save your changes.
+5. Write some really awesome posts!
 
 ## Customizing Techno Theme (Developers)
 
