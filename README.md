@@ -19,11 +19,13 @@ Techno theme was built using [Bootstrap 3](http://getbootstrap.com/), [SASS](htt
 
 I'm using this theme for my personal site, [ronemous.com](http://ronemous.com)
 
+/*
 ## Download
 
 You can download the theme here
 
 - [Github.io - zip](http://mronemous.github.io/ghost-theme-techno)
+*/
 
 ## Theme Features
 
@@ -59,19 +61,22 @@ var ghost = require('./core'),
     errors = require('./core/server/errorHandling');
 
 ghost()
-.then(function(param) {
+.then(function (param) {
+
     var settings = require('./core/server/api').settings;
-    var theme = 'none';
 
     settings
-      .read({key: 'activeTheme', context: {internal: true}})
-      .then(function(result) {
-        console.log("Current theme: " + result.value);
+        .read({key: 'activeTheme', context: {internal: true}})
+        .then(function (result) {
 
-        // only if the current theme is techno
-        if(result.value === "techno")
-            require('./content/themes/techno/index')();
-      });
+            try {
+                require('./content/themes/' + result.value + '/index')();
+            }
+            catch (e) {
+                //No custom index found, or it wasn't a proper module.
+            }
+
+        });
 })
 .otherwise(function (err) {
     errors.logErrorAndExit(err, err.context, err.help);
@@ -79,8 +84,8 @@ ghost()
 </pre>
 
 The new index.js allows
-    * custom handlebars helpers (in themes/techno/index.js) to be registered
-    * the config.js file to be referenced in the handlebars templates
+- custom handlebars helpers (in themes/techno/index.js) to be registered
+- the config.js file to be referenced in the handlebars templates
 
 3. Customize the details in themes/techno/config.js
 4. Update images/cover.jpg
@@ -114,6 +119,7 @@ To customize the bootswatch theme
 
 - [Bastard Theme](https://github.com/karloespiritu/Bastard)
 - [Bootstrap Sass](https://github.com/twbs/bootstrap-sass)
+- [Bootswatch](https://github.com/thomaspark/bootswatch)
 - [Font Awesome Icons](http://fortawesome.github.io/Font-Awesome/icons/)
 - [Grunt: The JavaScript Task Runner](http://gruntjs.com)
 - [Bower: A package manager for the web](http://bower.io)
