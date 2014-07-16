@@ -56,12 +56,22 @@ You can download the theme here
 // When run from command line.
 
 var ghost = require('./core'),
-    errors = require('./core/server/errorHandling')
-    ,themeIndex = require('./content/themes/techno/index');
+    errors = require('./core/server/errorHandling');
 
 ghost()
-.then(function () {
-    themeIndex();
+.then(function(param) {
+    var settings = require('./core/server/api').settings;
+    var theme = 'none';
+
+    settings
+      .read({key: 'activeTheme', context: {internal: true}})
+      .then(function(result) {
+        console.log("Current theme: " + result.value);
+
+        // only if the current theme is techno
+        if(result.value === "techno")
+            require('./content/themes/techno/index')();
+      });
 })
 .otherwise(function (err) {
     errors.logErrorAndExit(err, err.context, err.help);
