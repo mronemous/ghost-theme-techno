@@ -100,7 +100,8 @@ ghost()
 
         });
 
-    app.start();
+    //app.start was added to master, but not present in 0.5.0 initially.
+    if(app.start) { app.start(); }
 })
 .catch(function (err) {
     errors.logErrorAndExit(err, err.context, err.help);
