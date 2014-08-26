@@ -44,6 +44,7 @@ I'm using this theme for my personal site, [ronemous.com](http://ronemous.com)
 1. Copy the theme folder inside `/content/themes` of Ghost.
 2. Copy the following code to your [ghost root]/index.js file
 
+For ghost 0.4.2
 <pre>
 // # Ghost bootloader
 // Orchestrates the loading of Ghost
@@ -73,6 +74,38 @@ ghost()
 .otherwise(function (err) {
     errors.logErrorAndExit(err, err.context, err.help);
 });
+</pre>
+
+For ghost 0.5.0
+<pre>
+
+var ghost = require('./core'),
+    errors = require('./core/server/errors');
+
+ghost()
+.then(function (app) {
+
+    var settings = require('./core/server/api').settings;
+
+    settings
+        .read({key: 'activeTheme', context: {internal: true}})
+        .then(function (result) {
+
+            try {
+                require('./content/themes/' + result.settings[0].value + '/index')();
+            }
+            catch (e) {
+                //No custom index found, or it wasn't a proper module.
+            }
+
+        });
+
+    app.start();
+})
+.catch(function (err) {
+    errors.logErrorAndExit(err, err.context, err.help);
+});
+
 </pre>
 
 The new index.js allows custom handlebars helpers (in themes/techno/index.js) to be registered
