@@ -1,12 +1,20 @@
 <ul class="list-inline">
+    {{#if @blog.theme.author.showGithub}}
     <li><a href="{{@blog.theme.author.github}}" class="btn-social btn-outline" data-toggle="tooltip" data-placement="top" title="Github"><i class="fa fa-fw fa-github"></i></a>
     </li>
+    {{/if}}
+    {{#if @blog.theme.author.showTwitter}}
     <li><a href="{{@blog.theme.author.twitter}}" class="btn-social btn-outline" title="Twitter"><i class="fa fa-fw fa-twitter"></i></a>
     </li>
+    {{/if}}
+    {{#if @blog.theme.author.showLinkedIn}}
     <li><a href="{{@blog.theme.author.linkedin}}" class="btn-social btn-outline" title="LinkedIn"><i class="fa fa-fw fa-linkedin"></i></a>
     </li>
+    {{/if}}
+    {{#if @blog.theme.author.showEmail}}
     <li><a href="{{@blog.theme.author.email}}" class="btn-social btn-outline" title="Email"><i class="fa fa-fw fa-envelope"></i></a>
     </li>
+    {{/if}}
     <li><a href="{{@blog.url}}/rss/" class="btn-social btn-outline" title="Rss"><i class="fa fa-fw fa-rss"></i></a>
     </li>
 </ul>
