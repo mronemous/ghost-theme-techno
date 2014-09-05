@@ -2,9 +2,13 @@ var theme =
 {
     logo: '[YOUR LOGO]',
     author: {
+        showGithub: true,
         github: 'https://github.com/[YOUR ACCOUNT]',
+        showTwitter: true,
         twitter: 'https://twitter.com/[YOUR ACCOUNT]',
+        showLinkedIn: true,
         linkedin: 'http://linkedin.com/in/[YOUR ACCOUNT]',
+        showEmail: true,
         email: 'mailto:[YOUR EMAIL]'
     },
     disqus: {
