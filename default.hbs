@@ -49,8 +49,7 @@
 			
 			techno.config.google.analytics(ga);
     </script>
-    <script type="text/javascript" src="{{asset "js/scripts.min.js"}}"></script>
-		
+    
   </head>
 <body class="{{body_class}}">
 	
@@ -70,7 +69,8 @@
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foo }}
 
-    
+    <script type="text/javascript" src="{{asset "js/scripts.min.js"}}"></script>
+			
     </div>
 
 </body>
