@@ -1,6 +1,11 @@
 (function ($) {
     "use strict";
 
+		function AppViewModel() {
+			
+			$.extend(this, window.techno);
+		}
+	
     function initSearch() {
 
         var Search = function() {
@@ -76,6 +81,9 @@
         initSearch();
 
         hljs.initHighlightingOnLoad();
+			
+				// Activates knockout.js
+				ko.applyBindings(new AppViewModel());
     });
 
 }(jQuery));

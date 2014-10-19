@@ -13,7 +13,7 @@ Here are the enhancements added to Bastard
 - [Bootswatch](http://bootswatch.com/) allows easy integration of custom bootstrap themes.
 - Navigation menu was changed to use a basic Bootstrap 3 fixed top navigation bar.
 
-Techno theme was built using [Bootstrap 3](http://getbootstrap.com/), [SASS](http://sass-lang.com), [Font Awesome](http://fortawesome.github.io/Font-Awesome/), [Bower](http://bower.io/), and [Grunt](http://gruntjs.com/). Grunt is used to automate tasks for compiling and minifying the theme components and Bower to manage package dependencies. You can use the theme as is, or customize it by editing the `default.js` and `/assets/sass/*.scss` files.
+Techno theme was built using [Bootstrap 3](http://getbootstrap.com/), [SASS](http://sass-lang.com), [Font Awesome](http://fortawesome.github.io/Font-Awesome/), [Bower](http://bower.io/), [Knockout](http://knockoutjs.com), and [Grunt](http://gruntjs.com/). Grunt is used to automate tasks for compiling and minifying the theme components and Bower to manage package dependencies. You can use the theme as is, or customize it by editing the `default.js` and `/assets/sass/*.scss` files.
 
 ## Demo
 
@@ -42,77 +42,7 @@ I'm using this theme for my personal site, [ronemous.com](http://ronemous.com)
 ## Using Techno Theme
 
 1. Copy the theme folder inside `/content/themes` of Ghost.
-2. Copy the following code to your [ghost root]/index.js file
-
-For ghost 0.4.2
-<pre>
-// # Ghost bootloader
-// Orchestrates the loading of Ghost
-// When run from command line.
-
-var ghost = require('./core'),
-    errors = require('./core/server/errorHandling');
-
-ghost()
-.then(function (param) {
-
-    var settings = require('./core/server/api').settings;
-
-    settings
-        .read({key: 'activeTheme', context: {internal: true}})
-        .then(function (result) {
-
-            try {
-                require('./content/themes/' + result.value + '/index')();
-            }
-            catch (e) {
-                //No custom index found, or it wasn't a proper module.
-            }
-
-        });
-})
-.otherwise(function (err) {
-    errors.logErrorAndExit(err, err.context, err.help);
-});
-</pre>
-
-For ghost 0.5.0
-<pre>
-
-var ghost = require('./core'),
-    errors = require('./core/server/errors');
-
-ghost()
-.then(function (app) {
-
-    var settings = require('./core/server/api').settings;
-
-    settings
-        .read({key: 'activeTheme', context: {internal: true}})
-        .then(function (result) {
-
-            try {
-                require('./content/themes/' + result.settings[0].value + '/index')();
-            }
-            catch (e) {
-                //No custom index found, or it wasn't a proper module.
-            }
-
-        });
-
-    //app.start was added to master, but not present in 0.5.0 initially.
-    if(app.start) { app.start(); }
-})
-.catch(function (err) {
-    errors.logErrorAndExit(err, err.context, err.help);
-});
-
-</pre>
-
-The new index.js allows custom handlebars helpers (in themes/techno/index.js) to be registered
-and the config.js file to be referenced in the handlebars templates.
-
-1. Customize the details in themes/techno/config.js
+1. Customize the details in themes/techno/assets/js/config.js
 2. Update images/cover.jpg
 3. Update images/favicon.ico
 4. Restart Ghost and then go to Ghost's Settings (http://your.domain.com/ghost/settings/general/). Choose "Techno" from the theme dropdown menu and save your changes.
@@ -144,6 +74,7 @@ To customize the bootswatch theme
 
 - [Bastard Theme](https://github.com/karloespiritu/Bastard)
 - [Bootstrap Sass](https://github.com/twbs/bootstrap-sass)
+- [Knockout](http://knockoutjs.com)
 - [Bootswatch](https://github.com/thomaspark/bootswatch)
 - [Font Awesome Icons](http://fortawesome.github.io/Font-Awesome/icons/)
 - [Grunt: The JavaScript Task Runner](http://gruntjs.com)

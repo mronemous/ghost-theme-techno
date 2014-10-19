@@ -14,14 +14,10 @@
                 </a>
             </div>
             <div class="navbar-collapse navbar-responsive-collapse collapse" style="height: 1px;">
-                <ul class="navbar-nav nav menu menu-main-menu">
-
-                  {{#each @blog.theme.menu}}
-                  <li><a href="{{@blog.url}}{{route}}">{{text}}</a></li>
-                  {{/each}}
-
+                <ul class="navbar-nav nav menu menu-main-menu" data-bind="foreach: config.menu">
+                  <li><a data-bind="attr: { href: route }, text: text"></a></li>
                 </ul>
-                <form class="navbar-form navbar-left" role="search">
+                <form class="navbar-form navbar-right" role="search">
                     <div class="form-group">
                         <input class="search" type="text" placeholder="Search..."/>
                     </div>

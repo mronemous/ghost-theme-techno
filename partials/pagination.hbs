@@ -1,9 +1,5 @@
-{{#ifCond 1 '!=' pages}}
-
-<ul class="pager">
+<ul data-bind="style: { display: (hbData.pagination.pages == 1) ? 'none' : 'block' }" class="pager">
     <li class="previous {{#if next}}disabled{{/if}}"><a href="{{page_url prev}}#top">&larr; Newer</a></li>
     <span class="page-number">Page {{page}} of {{pages}}</span>
     <li class="next {{#if prev}}disabled{{/if}}"><a href="{{page_url next}}#top">Older &rarr;</a></li>
 </ul>
-
-{{/ifCond}}

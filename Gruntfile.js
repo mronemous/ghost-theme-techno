@@ -39,6 +39,7 @@ module.exports = function(grunt) {
       js: {
         src: [
               'assets/bower_components/jquery/dist/jquery.js',
+							'assets/bower_components/knockout/dist/knockout.js',
               'assets/bower_components/bootstrap/dist/js/bootstrap.js',
               'assets/bower_components/highlightjs/highlight.pack.js',
               'assets/js/jquery.ghosthunter.js',

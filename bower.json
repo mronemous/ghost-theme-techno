@@ -5,6 +5,7 @@
     "bootstrap": "~3.1.1",
     "highlightjs": "~8.0.0",
     "bootstrap-sass-official": "~3.1.1",
-    "font-awesome": "~4.1.0"
+    "font-awesome": "~4.1.0",
+    "knockout": "~3.2.0"
   }
 }
