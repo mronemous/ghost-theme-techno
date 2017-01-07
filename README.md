@@ -17,7 +17,7 @@ Techno theme was built using [Bootstrap 3](http://getbootstrap.com/), [SASS](htt
 
 ## Demo
 
-I'm using this theme for my personal site, [ronemous.com](http://ronemous.com)
+I'm using this theme for my personal site, [mobilejedi.net](http://mobilejedi.net)
 
 ## Theme Features
 
